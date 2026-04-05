@@ -13,7 +13,8 @@ from collections import Counter, defaultdict
 import os, re, json
 
 # Setup
-BASE = "~/ETL_ReviewPapers"
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+BASE = os.path.join(SCRIPT_DIR, '..')
 FIG_DIR = os.path.join(BASE, "figures")
 os.makedirs(FIG_DIR, exist_ok=True)
 

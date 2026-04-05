@@ -9,13 +9,14 @@ from collections import defaultdict
 
 import fitz  # PyMuPDF
 
-# Paths
-BASE = "~/ETL_ReviewPapers"
-SLR_COLLECTION = os.path.join(BASE, "SLR_PaperCollection")
-ZOTERO = "~/zotero_collection/storage"
-SLR_PAPERS = os.path.join(BASE, "SLR_Papers")
-OUTPUT_CSV = os.path.join(BASE, "SLR_Extracted_From_PDFs.csv")
-OUTPUT_JSON = os.path.join(BASE, "SLR_Extracted_From_PDFs.json")
+# Paths - adjust these to your local setup
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+BASE = os.path.join(SCRIPT_DIR, '..')
+SLR_COLLECTION = os.environ.get("SLR_PAPER_DIR", os.path.join(BASE, "papers"))
+ZOTERO = os.environ.get("ZOTERO_DIR", os.path.join(BASE, "zotero_storage"))
+SLR_PAPERS = os.path.join(BASE, "data")
+OUTPUT_CSV = os.path.join(BASE, "data", "SLR_Extracted_From_PDFs.csv")
+OUTPUT_JSON = os.path.join(BASE, "data", "SLR_Extracted_From_PDFs.json")
 
 # Keywords for extraction
 SOLVER_KEYWORDS = {
