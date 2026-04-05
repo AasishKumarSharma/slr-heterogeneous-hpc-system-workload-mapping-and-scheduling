@@ -10,9 +10,9 @@ from collections import defaultdict
 import fitz  # PyMuPDF
 
 # Paths
-BASE = "/home/aasish/Documents/PhD/Others/claude/Papers/ETL_ReviewPapers"
+BASE = "~/ETL_ReviewPapers"
 SLR_COLLECTION = os.path.join(BASE, "SLR_PaperCollection")
-ZOTERO = "/home/aasish/Documents/PhD/zotero_collection/storage"
+ZOTERO = "~/zotero_collection/storage"
 SLR_PAPERS = os.path.join(BASE, "SLR_Papers")
 OUTPUT_CSV = os.path.join(BASE, "SLR_Extracted_From_PDFs.csv")
 OUTPUT_JSON = os.path.join(BASE, "SLR_Extracted_From_PDFs.json")
